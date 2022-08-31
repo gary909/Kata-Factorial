@@ -1,5 +1,13 @@
 function factorial(n) {
-    // Calculate the factorial here
+    let myNum = 1;
+    if (n < 0 || n > 11) {
+        throw new RangeError();
+    } else {
+        for (var i = n; i >= 1; i--) {
+            myNum = myNum * i;
+        }
+    }
+    return myNum;
 }
 
 console.log(factorial(0)); // "factorial for 0 is 1"
